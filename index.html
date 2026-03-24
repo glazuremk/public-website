@@ -1,323 +1,1417 @@
 <!DOCTYPE html>
-        <html lang="en">
-        <head>
-        	<title>Global Azure Skopje 2026</title>
-        	<meta charset="utf-8">
-        	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<html lang="en">
+<head>
+	<title>Global Azure Skopje 2026</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="Global Azure 2026 - Skopje Edition. A free community-driven event focused on Microsoft Azure, held on April 16, 2026 in Skopje, Macedonia.">
 
-        	<meta property="og:title" content="Global Azure 2026 - Skopje" />
-        	<meta property="og:description" content="Organized Globally, Held Locally. Global Azure is from the community for the community event, with local events happening around the world covering Microsoft Azure services. During this FREE global event, communities worldwide will be organizing local editions, and on the 16th of April 2026 it will be organized for the third time in Skopje, Macedonia. More details about the event will be available soon. Stay tuned.">
-        	<meta property="og:image" content="images/GLAzure_2026_side.png" />
-        	<meta property="og:url" content="http://globalazure.mk" />
+	<meta property="og:title" content="Global Azure 2026 - Skopje" />
+	<meta property="og:description" content="Organized Globally, Held Locally. Global Azure is a community-driven event with local gatherings worldwide focusing on Microsoft Azure services. April 16, 2026 — Skopje, Macedonia.">
+	<meta property="og:image" content="images/GLAzure_2026_side.png" />
+	<meta property="og:url" content="http://globalazure.mk" />
 
-        	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-        	<link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
-        	<link rel="stylesheet" href="css/animate.css">
-        	<link rel="stylesheet" href="css/owl.carousel.min.css">
-        	<link rel="stylesheet" href="css/owl.theme.default.min.css">
-        	<link rel="stylesheet" href="css/magnific-popup.css">
-        	<link rel="stylesheet" href="css/aos.css">
-        	<link rel="stylesheet" href="css/ionicons.min.css">
-        	<link rel="stylesheet" href="css/bootstrap-datepicker.css">
-        	<link rel="stylesheet" href="css/flaticon.css">
-        	<link rel="stylesheet" href="css/icomoon.css">
-        	<link rel="stylesheet" href="css/style.css">
-        	<style>
-        		body {
-        			margin-top: 5%; /* Add 5% top margin to the body */
-        		}
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+	<link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/owl.theme.default.min.css">
+	<link rel="stylesheet" href="css/magnific-popup.css">
+	<link rel="stylesheet" href="css/aos.css">
+	<link rel="stylesheet" href="css/ionicons.min.css">
+	<link rel="stylesheet" href="css/flaticon.css">
+	<link rel="stylesheet" href="css/icomoon.css">
+	<link rel="stylesheet" href="css/style.css">
 
-        		.sponsors .row > div {
-        			text-align: center;
-        			margin-bottom: 2rem;
-        			display: flex; /* Enable flexbox for centering */
-        			justify-content: center; /* Center horizontally */
-        			align-items: center; /* Center vertically */
-        			min-height: 150px; /* Increased minimum height for logo containers */
-        		}
+	<style>
+		/* ============================================
+		   GLOBAL AZURE 2026 — REDESIGNED STYLES
+		   ============================================ */
 
-        		.sponsors a {
-        			line-height: 140px;
-        			display: block;
-        			max-width: 100%; /* Ensure link doesn't overflow container */
-        		}
+		:root {
+			--azure-primary: #0078D4;
+			--azure-dark: #005A9E;
+			--azure-light: #DEECF9;
+			--azure-accent: #50E6FF;
+			--dark: #1B1B1B;
+			--dark-secondary: #2D2D2D;
+			--text-primary: #1A1A2E;
+			--text-secondary: #555770;
+			--text-light: #8E8EA0;
+			--bg-white: #FFFFFF;
+			--bg-light: #F7F9FC;
+			--bg-section: #F0F4F8;
+			--border-light: #E2E8F0;
+			--gradient-azure: linear-gradient(135deg, #0078D4 0%, #50E6FF 100%);
+			--gradient-dark: linear-gradient(135deg, #1B1B1B 0%, #0078D4 100%);
+			--shadow-sm: 0 1px 3px rgba(0,0,0,0.08);
+			--shadow-md: 0 4px 20px rgba(0,0,0,0.08);
+			--shadow-lg: 0 10px 40px rgba(0,0,0,0.12);
+			--shadow-card: 0 2px 16px rgba(0,120,212,0.08);
+			--radius-sm: 8px;
+			--radius-md: 12px;
+			--radius-lg: 20px;
+			--transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+		}
 
-        		.sponsors img {
-        			max-width: 100%; /* Increased maximum width to fill the container */
-        			max-height: 140px; /* Increased maximum height for logos */
-        			width: auto;
-        			height: auto;
-        			vertical-align: middle;
-        		}
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
 
-        		/* Adjust specific logo sizes */
-        		.sponsors img[alt="Base 42"] {
-        			max-height: 130px; /* Adjust Base42 specifically */
-        		}
+		html {
+			scroll-behavior: smooth;
+		}
 
-        		.participation-cta {
-        			text-align: center;
-        			padding: 3rem 0;
-        			background-color: #f8f9fa;
-        		}
+		body {
+			font-family: 'Inter', 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+			color: var(--text-primary);
+			background: var(--bg-white);
+			overflow-x: hidden;
+			margin: 0 !important;
+			line-height: 1.7;
+		}
 
-        		.participation-cta a {
-        			display: inline-block;
-        			background-color: #007bff;
-        			color: white;
-        			padding: 1rem 2rem;
-        			border-radius: 5px;
-        			text-decoration: none;
-        			font-weight: bold;
-        			transition: background-color 0.3s ease;
-        		}
+		h1, h2, h3, h4, h5, h6 {
+			font-family: 'Poppins', sans-serif;
+			font-weight: 700;
+			line-height: 1.3;
+		}
 
-        		.participation-cta a:hover {
-        			background-color: #0056b3;
-        		}
+		/* ============ NAVIGATION ============ */
+		.ga-navbar {
+			position: fixed;
+			top: 0;
+			left: 0;
+			right: 0;
+			z-index: 9999;
+			padding: 1rem 0;
+			transition: var(--transition);
+			background: transparent;
+		}
 
-        		.ftco-counter .img {
-        			background-position: center left; /* Adjust background position */
-        			background-size: contain; /* Change to 'contain' to show the whole image */
-        			min-height: 400px; /* Increase min-height to accommodate the full image */
-        		}
+		.ga-navbar.scrolled {
+			background: rgba(255, 255, 255, 0.97);
+			backdrop-filter: blur(20px);
+			-webkit-backdrop-filter: blur(20px);
+			box-shadow: 0 1px 20px rgba(0,0,0,0.06);
+			padding: 0.6rem 0;
+		}
 
-        		@media (max-width: 991.98px) { /* Adjust for typical laptop screen max-width */
-        			.ftco-counter .img {
-        				min-height: 300px; /* Adjust min-height for smaller laptop screens/tablets */
-        			}
-        		}
+		.ga-navbar .container {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
 
-        		@media (max-width: 767.98px) { /* For smaller screens */
-        			.ftco-counter .row > div:first-child {
-        				margin-bottom: 2rem; /* Add space below the image on small screens */
-        			}
-        			.ftco-counter .img {
-        				min-height: 200px; /* Adjust minimum height for smaller screens */
-        				background-position: center center; /* Center the image on smaller screens */
-        			}
-        		}
+		.ga-navbar-brand {
+			display: flex;
+			align-items: center;
+			text-decoration: none !important;
+			gap: 10px;
+		}
 
-        		.navbar {
-        			/* margin-bottom: 2rem; Removed as the navbar is deleted */
-        		}
+		.ga-navbar-brand img {
+			height: 40px;
+			width: auto;
+		}
 
-        		.navbar-brand span {
-        			font-weight: 400;
-        		}
-                .location-section {
-                    background-color: #f8f9fa;
-                    padding: 3rem 0;
-                    margin-top: 2rem;
-                }
+		.ga-navbar-brand-text {
+			font-family: 'Poppins', sans-serif;
+			font-weight: 700;
+			font-size: 1.15rem;
+			color: #fff;
+			transition: var(--transition);
+		}
 
-                .location-map {
-                    width: 100%;
-                    height: 400px; /* Adjust height as needed */
-                    border: none;
-                }
-        	</style>
-        </head>
-        <body>
-			<br>
-			<br>
-        	<section class="ftco-counter img" id="section-counter">
-        		<div class="container">
-        			<div class="row d-flex">
-        				<div class="col-md-6 d-flex">
-        					<div class="img d-flex align-self-stretch" style="background-image:url(images/GLAzure_2025_side.png);">
-        					</div>
-        				</div>
-        				<div class="col-md-6 pl-md-5 py-5">
-        					<div class="row justify-content-start pb-3">
-        						<div class="col-md-12 heading-section ftco-animate">
-        							<h2 class="mb-4"><span>Event</span> Info</h2>
-        							<p>
-        								<em>Organized Globally, Held Locally</em> <br>
-        								Global Azure is a community-driven event, with local gatherings worldwide focusing on Microsoft Azure services. This global event sees communities across the globe organizing local editions. On the 16th of April 2026, it will be held for the third time in Skopje, Macedonia. The event will feature a total of 5 sessions within a single track in the Netaville`s amphitheatre.
-        							</p>
-        						</div>
-        					</div>
-        				</div>
-        			</div>
-        		</div>
-        	</section>
-			<br/>
-			<br/>
-			<br/>
-			<div style="display: flex; flex-direction: column; align-items: center;">
-			<h4>Global Azure 2026 Skopje Edition is Organized By<h4>
-				<div style="transform: scale(0.7);">
-					<img src="images/Organizers.png">
+		.ga-navbar.scrolled .ga-navbar-brand-text {
+			color: var(--text-primary);
+		}
+
+		.ga-nav-links {
+			display: flex;
+			align-items: center;
+			gap: 2rem;
+			list-style: none;
+			margin: 0;
+			padding: 0;
+		}
+
+		.ga-nav-links a {
+			text-decoration: none !important;
+			font-weight: 500;
+			font-size: 0.9rem;
+			color: rgba(255,255,255,0.85);
+			transition: var(--transition);
+			position: relative;
+			padding: 4px 0;
+		}
+
+		.ga-nav-links a::after {
+			content: '';
+			position: absolute;
+			bottom: -2px;
+			left: 0;
+			width: 0;
+			height: 2px;
+			background: var(--azure-accent);
+			transition: var(--transition);
+			border-radius: 2px;
+		}
+
+		.ga-nav-links a:hover::after {
+			width: 100%;
+		}
+
+		.ga-nav-links a:hover {
+			color: #fff;
+		}
+
+		.ga-navbar.scrolled .ga-nav-links a {
+			color: var(--text-secondary);
+		}
+
+		.ga-navbar.scrolled .ga-nav-links a:hover {
+			color: var(--azure-primary);
+		}
+
+		.ga-navbar.scrolled .ga-nav-links a::after {
+			background: var(--azure-primary);
+		}
+
+		.ga-nav-cta {
+			background: var(--azure-primary) !important;
+			color: #fff !important;
+			padding: 8px 22px !important;
+			border-radius: 50px !important;
+			font-weight: 600 !important;
+			font-size: 0.85rem !important;
+			transition: var(--transition);
+			border: none;
+		}
+
+		.ga-nav-cta:hover {
+			background: var(--azure-dark) !important;
+			transform: translateY(-1px);
+			box-shadow: 0 4px 15px rgba(0,120,212,0.35);
+		}
+
+		.ga-navbar.scrolled .ga-nav-cta {
+			color: #fff !important;
+		}
+
+		.ga-mobile-toggle {
+			display: none;
+			background: none;
+			border: none;
+			cursor: pointer;
+			padding: 8px;
+		}
+
+		.ga-mobile-toggle span {
+			display: block;
+			width: 24px;
+			height: 2px;
+			background: #fff;
+			margin: 5px 0;
+			transition: var(--transition);
+			border-radius: 2px;
+		}
+
+		.ga-navbar.scrolled .ga-mobile-toggle span {
+			background: var(--text-primary);
+		}
+
+		/* ============ HERO SECTION ============ */
+		.ga-hero {
+			position: relative;
+			min-height: 100vh;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			background: linear-gradient(165deg, #0a0a1a 0%, #0d1f3c 30%, #0078D4 70%, #50E6FF 100%);
+			overflow: hidden;
+		}
+
+		.ga-hero::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background:
+				radial-gradient(ellipse at 20% 50%, rgba(0,120,212,0.15) 0%, transparent 50%),
+				radial-gradient(ellipse at 80% 20%, rgba(80,230,255,0.1) 0%, transparent 50%);
+			pointer-events: none;
+		}
+
+		.ga-hero-particles {
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			overflow: hidden;
+			pointer-events: none;
+		}
+
+		.ga-hero-particles .particle {
+			position: absolute;
+			width: 4px;
+			height: 4px;
+			background: rgba(80, 230, 255, 0.3);
+			border-radius: 50%;
+			animation: float-particle 15s infinite ease-in-out;
+		}
+
+		.ga-hero-particles .particle:nth-child(1) { top: 20%; left: 10%; animation-delay: 0s; }
+		.ga-hero-particles .particle:nth-child(2) { top: 60%; left: 20%; animation-delay: 3s; width: 6px; height: 6px; }
+		.ga-hero-particles .particle:nth-child(3) { top: 30%; left: 70%; animation-delay: 6s; }
+		.ga-hero-particles .particle:nth-child(4) { top: 70%; left: 80%; animation-delay: 9s; width: 3px; height: 3px; }
+		.ga-hero-particles .particle:nth-child(5) { top: 40%; left: 50%; animation-delay: 12s; width: 5px; height: 5px; }
+		.ga-hero-particles .particle:nth-child(6) { top: 80%; left: 40%; animation-delay: 2s; }
+		.ga-hero-particles .particle:nth-child(7) { top: 15%; left: 85%; animation-delay: 7s; width: 3px; height: 3px; }
+		.ga-hero-particles .particle:nth-child(8) { top: 50%; left: 30%; animation-delay: 10s; width: 5px; height: 5px; }
+
+		@keyframes float-particle {
+			0%, 100% { transform: translateY(0) translateX(0); opacity: 0.3; }
+			25% { transform: translateY(-30px) translateX(15px); opacity: 0.8; }
+			50% { transform: translateY(-15px) translateX(-10px); opacity: 0.4; }
+			75% { transform: translateY(-40px) translateX(20px); opacity: 0.7; }
+		}
+
+		.ga-hero-content {
+			position: relative;
+			z-index: 2;
+			text-align: center;
+			color: #fff;
+			max-width: 850px;
+			padding: 0 2rem;
+		}
+
+		.ga-hero-badge {
+			display: inline-flex;
+			align-items: center;
+			gap: 0;
+			background: none;
+			border: none;
+			padding: 0;
+			border-radius: 0;
+			font-size: 0.95rem;
+			font-weight: 400;
+			color: rgba(255,255,255,0.6);
+			margin-bottom: 1.5rem;
+			letter-spacing: 3px;
+			text-transform: uppercase;
+		}
+
+		.ga-hero h1 {
+			font-size: 3.8rem;
+			font-weight: 800;
+			line-height: 1.1;
+			margin-bottom: 1rem;
+			letter-spacing: -1px;
+			background: linear-gradient(135deg, #FFFFFF 0%, #B4EDFF 40%, #50E6FF 70%, #78d5ef 100%);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			background-clip: text;
+		}
+
+		.ga-hero h1 .highlight {
+			background: linear-gradient(135deg, #50E6FF 0%, #00BFFF 50%, #87CEFA 100%);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			background-clip: text;
+		}
+
+		.ga-hero-subtitle {
+			font-size: 1.25rem;
+			color: rgba(255,255,255,0.75);
+			margin-bottom: 2.5rem;
+			font-weight: 300;
+			max-width: 600px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		.ga-hero-meta {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			gap: 2.5rem;
+			gap: 3.5rem;
+			margin-bottom: 2.5rem;
+			flex-wrap: wrap;
+		}
+
+		.ga-hero-meta-item {
+			display: flex;
+			align-items: center;
+			gap: 10px;
+			color: rgba(255,255,255,0.9);
+			font-weight: 500;
+			font-size: 1rem;
+		}
+
+		.ga-hero-meta-item .icon {
+			width: 42px;
+			height: 42px;
+			border-radius: 12px;
+			background: rgba(255,255,255,0.1);
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-size: 1.1rem;
+		}
+
+		.ga-hero-actions {
+			display: flex;
+			justify-content: center;
+			gap: 1rem;
+			flex-wrap: wrap;
+		}
+
+		.ga-btn {
+			display: inline-flex;
+			align-items: center;
+			gap: 8px;
+			padding: 14px 32px;
+			border-radius: 50px;
+			font-family: 'Poppins', sans-serif;
+			font-weight: 600;
+			font-size: 0.95rem;
+			text-decoration: none !important;
+			transition: var(--transition);
+			cursor: pointer;
+			border: none;
+		}
+
+		.ga-btn-primary {
+			background: #fff;
+			color: var(--azure-primary);
+		}
+
+		.ga-btn-primary:hover {
+			transform: translateY(-2px);
+			box-shadow: 0 8px 30px rgba(255,255,255,0.25);
+			color: var(--azure-dark);
+		}
+
+		.ga-btn-outline {
+			background: transparent;
+			color: #fff;
+			border: 2px solid rgba(255,255,255,0.3);
+		}
+
+		.ga-btn-outline:hover {
+			background: rgba(255,255,255,0.1);
+			border-color: rgba(255,255,255,0.6);
+			color: #fff;
+			transform: translateY(-2px);
+		}
+
+		/* ============ COUNTDOWN ============ */
+		.ga-countdown {
+			display: flex;
+			justify-content: center;
+			gap: 1.5rem;
+			margin-top: 3rem;
+			flex-wrap: wrap;
+		}
+
+		.ga-countdown-item {
+			text-align: center;
+		}
+
+		.ga-countdown-value {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 72px;
+			height: 72px;
+			background: rgba(255,255,255,0.08);
+			backdrop-filter: blur(10px);
+			border: 1px solid rgba(255,255,255,0.12);
+			border-radius: 16px;
+			font-size: 1.8rem;
+			font-weight: 700;
+			color: #fff;
+			font-family: 'Poppins', sans-serif;
+		}
+
+		.ga-countdown-label {
+			font-size: 0.7rem;
+			text-transform: uppercase;
+			letter-spacing: 1.5px;
+			color: rgba(255,255,255,0.5);
+			margin-top: 8px;
+			font-weight: 500;
+		}
+
+		/* ============ SECTION COMMON ============ */
+		.ga-section {
+			padding: 100px 0;
+		}
+
+		.ga-section-header {
+			text-align: center;
+			margin-bottom: 60px;
+		}
+
+		.ga-section-label {
+			display: inline-flex;
+			align-items: center;
+			gap: 8px;
+			font-size: 0.8rem;
+			font-weight: 600;
+			text-transform: uppercase;
+			letter-spacing: 2px;
+			color: var(--azure-primary);
+			margin-bottom: 1rem;
+		}
+
+		.ga-section-label::before,
+		.ga-section-label::after {
+			content: '';
+			width: 24px;
+			height: 1.5px;
+			background: var(--azure-primary);
+			opacity: 0.4;
+		}
+
+		.ga-section-title {
+			font-size: 2.6rem;
+			font-weight: 800;
+			color: var(--text-primary);
+			margin-bottom: 1rem;
+			letter-spacing: -0.5px;
+		}
+
+		.ga-section-subtitle {
+			font-size: 1.1rem;
+			color: var(--text-secondary);
+			max-width: 600px;
+			margin: 0 auto;
+			font-weight: 400;
+		}
+
+		/* ============ ABOUT SECTION ============ */
+		.ga-about {
+			background: var(--bg-white);
+		}
+
+		.ga-about-grid {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			gap: 60px;
+			align-items: center;
+		}
+
+		.ga-about-image {
+			position: relative;
+		}
+
+		.ga-about-image img {
+			width: 100%;
+			border-radius: var(--radius-lg);
+			box-shadow: var(--shadow-lg);
+		}
+
+		.ga-about-image::after {
+			content: '';
+			position: absolute;
+			top: 20px;
+			right: -20px;
+			bottom: -20px;
+			left: 20px;
+			border: 2px solid var(--azure-light);
+			border-radius: var(--radius-lg);
+			z-index: -1;
+		}
+
+		.ga-about-content h2 {
+			font-size: 2.4rem;
+			margin-bottom: 1.5rem;
+			color: var(--text-primary);
+		}
+
+		.ga-about-content h2 span {
+			color: var(--azure-primary);
+		}
+
+		.ga-about-content p {
+			color: var(--text-secondary);
+			font-size: 1.05rem;
+			line-height: 1.8;
+			margin-bottom: 1.5rem;
+		}
+
+		.ga-about-features {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			gap: 1rem;
+			margin-top: 2rem;
+		}
+
+		.ga-about-feature {
+			display: flex;
+			align-items: center;
+			gap: 12px;
+			padding: 14px 18px;
+			background: var(--bg-light);
+			border-radius: var(--radius-sm);
+			transition: var(--transition);
+		}
+
+		.ga-about-feature:hover {
+			background: var(--azure-light);
+		}
+
+		.ga-about-feature .icon {
+			width: 40px;
+			height: 40px;
+			border-radius: 10px;
+			background: var(--azure-light);
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-size: 1.2rem;
+			flex-shrink: 0;
+			line-height: 1;
+		}
+
+		.ga-about-feature span {
+			font-weight: 600;
+			font-size: 0.9rem;
+			color: var(--text-primary);
+		}
+
+		/* ============ ORGANIZERS ============ */
+		.ga-organizers {
+			background: var(--bg-light);
+		}
+
+		.ga-organizers-img {
+			max-width: 700px;
+			margin: 0 auto;
+			display: block;
+			width: 100%;
+		}
+
+		/* ============ SPEAKERS ============ */
+		.ga-speakers {
+			background: var(--bg-white);
+		}
+
+		.ga-speakers-embed {
+			background: var(--bg-white);
+			border-radius: var(--radius-md);
+			box-shadow: var(--shadow-card);
+			padding: 2rem;
+			overflow: hidden;
+		}
+
+		.ga-speakers-embed iframe {
+			width: 100%;
+			border: none;
+			height: 520px;
+			border-radius: var(--radius-sm);
+		}
+
+		/* ============ SCHEDULE ============ */
+		.ga-schedule {
+			background: var(--bg-light);
+		}
+
+		.ga-schedule-embed {
+			background: var(--bg-white);
+			border-radius: var(--radius-md);
+			box-shadow: var(--shadow-card);
+			padding: 2rem;
+			overflow: hidden;
+		}
+
+		/* ============ SPONSORS ============ */
+		.ga-sponsors {
+			background: var(--bg-white);
+		}
+
+		.ga-sponsors-grid {
+			display: grid;
+			grid-template-columns: repeat(4, 1fr);
+			gap: 1.5rem;
+		}
+
+		.ga-sponsor-card {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			padding: 1.5rem;
+			background: var(--bg-white);
+			border: 1px solid var(--border-light);
+			border-radius: var(--radius-md);
+			min-height: 120px;
+			transition: var(--transition);
+		}
+
+		.ga-sponsor-card:hover {
+			border-color: var(--azure-primary);
+			box-shadow: var(--shadow-card);
+			transform: translateY(-4px);
+		}
+
+		.ga-sponsor-card img {
+			max-width: 160px;
+			max-height: 80px;
+			width: auto;
+			height: auto;
+			filter: grayscale(30%);
+			opacity: 0.85;
+			transition: var(--transition);
+		}
+
+		.ga-sponsor-card:hover img {
+			filter: grayscale(0%);
+			opacity: 1;
+		}
+
+		/* ============ LOCATION ============ */
+		.ga-location {
+			background: var(--bg-light);
+		}
+
+		.ga-location-grid {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			gap: 40px;
+			align-items: center;
+		}
+
+		.ga-location-info h3 {
+			font-size: 1.6rem;
+			margin-bottom: 1rem;
+			color: var(--text-primary);
+		}
+
+		.ga-location-info p {
+			color: var(--text-secondary);
+			font-size: 1rem;
+			line-height: 1.8;
+			margin-bottom: 1.5rem;
+		}
+
+		.ga-location-details {
+			display: flex;
+			flex-direction: column;
+			gap: 1rem;
+		}
+
+		.ga-location-detail {
+			display: flex;
+			align-items: center;
+			gap: 14px;
+		}
+
+		.ga-location-detail .icon {
+			width: 44px;
+			height: 44px;
+			border-radius: 12px;
+			background: var(--azure-light);
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			color: var(--azure-primary);
+			font-size: 1.1rem;
+			flex-shrink: 0;
+		}
+
+		.ga-location-detail .info strong {
+			display: block;
+			font-size: 0.95rem;
+			color: var(--text-primary);
+		}
+
+		.ga-location-detail .info span {
+			font-size: 0.85rem;
+			color: var(--text-secondary);
+		}
+
+		.ga-location-map {
+			border-radius: var(--radius-lg);
+			overflow: hidden;
+			box-shadow: var(--shadow-md);
+		}
+
+		.ga-location-map img {
+			width: 100%;
+			height: auto;
+			display: block;
+		}
+
+		/* ============ FOOTER ============ */
+		.ga-footer {
+			background: var(--dark);
+			color: rgba(255,255,255,0.7);
+			padding: 60px 0 30px;
+		}
+
+		.ga-footer-top {
+			display: flex;
+			justify-content: space-between;
+			align-items: flex-start;
+			padding-bottom: 40px;
+			border-bottom: 1px solid rgba(255,255,255,0.08);
+			flex-wrap: wrap;
+			gap: 2rem;
+		}
+
+		.ga-footer-brand h3 {
+			font-size: 1.4rem;
+			color: #fff;
+			margin-bottom: 0.5rem;
+		}
+
+		.ga-footer-brand p {
+			font-size: 0.9rem;
+			color: rgba(255,255,255,0.5);
+			max-width: 350px;
+		}
+
+		.ga-footer-links {
+			display: flex;
+			gap: 3rem;
+		}
+
+		.ga-footer-links-column h4 {
+			color: #fff;
+			font-size: 0.9rem;
+			font-weight: 600;
+			margin-bottom: 1rem;
+			text-transform: uppercase;
+			letter-spacing: 1px;
+		}
+
+		.ga-footer-links-column ul {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+		}
+
+		.ga-footer-links-column li {
+			margin-bottom: 0.5rem;
+		}
+
+		.ga-footer-links-column a {
+			color: rgba(255,255,255,0.5);
+			text-decoration: none;
+			font-size: 0.9rem;
+			transition: var(--transition);
+		}
+
+		.ga-footer-links-column a:hover {
+			color: var(--azure-accent);
+		}
+
+		.ga-footer-bottom {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding-top: 30px;
+			flex-wrap: wrap;
+			gap: 1rem;
+		}
+
+		.ga-footer-bottom p {
+			font-size: 0.85rem;
+			color: rgba(255,255,255,0.4);
+			margin: 0;
+		}
+
+		.ga-footer-bottom a {
+			color: var(--azure-accent);
+			text-decoration: none;
+		}
+
+		/* ============ SCROLL TO TOP ============ */
+		.ga-scroll-top {
+			position: fixed;
+			bottom: 30px;
+			right: 30px;
+			width: 44px;
+			height: 44px;
+			border-radius: 12px;
+			background: var(--azure-primary);
+			color: #fff;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			text-decoration: none !important;
+			opacity: 0;
+			visibility: hidden;
+			transition: var(--transition);
+			box-shadow: var(--shadow-md);
+			z-index: 999;
+			cursor: pointer;
+			border: none;
+		}
+
+		.ga-scroll-top.visible {
+			opacity: 1;
+			visibility: visible;
+		}
+
+		.ga-scroll-top:hover {
+			background: var(--azure-dark);
+			transform: translateY(-3px);
+			color: #fff;
+		}
+
+		/* ============ RESPONSIVE ============ */
+		@media (max-width: 991px) {
+			.ga-nav-links {
+				display: none;
+				position: absolute;
+				top: 100%;
+				left: 0;
+				right: 0;
+				background: rgba(255,255,255,0.98);
+				backdrop-filter: blur(20px);
+				flex-direction: column;
+				padding: 1.5rem 2rem;
+				gap: 0;
+				box-shadow: var(--shadow-lg);
+				border-radius: 0 0 var(--radius-md) var(--radius-md);
+			}
+
+			.ga-nav-links.active {
+				display: flex;
+			}
+
+			.ga-nav-links a {
+				color: var(--text-primary) !important;
+				padding: 12px 0;
+				border-bottom: 1px solid var(--border-light);
+				width: 100%;
+			}
+
+			.ga-nav-links a:last-child {
+				border-bottom: none;
+			}
+
+			.ga-mobile-toggle {
+				display: block;
+			}
+
+			.ga-hero h1 {
+				font-size: 2.6rem;
+			}
+
+			.ga-hero-subtitle {
+				font-size: 1.05rem;
+			}
+
+			.ga-about-grid,
+			.ga-location-grid {
+				grid-template-columns: 1fr;
+				gap: 40px;
+			}
+
+			.ga-sponsors-grid {
+				grid-template-columns: repeat(3, 1fr);
+			}
+
+			.ga-section-title {
+				font-size: 2.1rem;
+			}
+
+			.ga-section {
+				padding: 70px 0;
+			}
+
+			.ga-footer-top {
+				flex-direction: column;
+			}
+		}
+
+		@media (max-width: 767px) {
+			.ga-hero h1 {
+				font-size: 2rem;
+			}
+
+			.ga-hero-meta {
+				gap: 1.5rem;
+			}
+
+			.ga-countdown {
+				gap: 1rem;
+			}
+
+			.ga-countdown-value {
+				width: 58px;
+				height: 58px;
+				font-size: 1.4rem;
+			}
+
+			.ga-about-features {
+				grid-template-columns: 1fr;
+			}
+
+			.ga-sponsors-grid {
+				grid-template-columns: repeat(2, 1fr);
+			}
+
+			.ga-section {
+				padding: 60px 0;
+			}
+
+			.ga-section-title {
+				font-size: 1.8rem;
+			}
+
+			.ga-footer-links {
+				flex-direction: column;
+				gap: 1.5rem;
+			}
+
+			.ga-hero-actions {
+				flex-direction: column;
+				align-items: center;
+			}
+		}
+
+		@media (max-width: 480px) {
+			.ga-hero h1 {
+				font-size: 1.7rem;
+			}
+
+			.ga-sponsors-grid {
+				grid-template-columns: 1fr 1fr;
+			}
+		}
+
+		/* ============ ANIMATIONS ============ */
+		.ga-fade-up {
+			opacity: 0;
+			transform: translateY(30px);
+			transition: opacity 0.6s ease, transform 0.6s ease;
+		}
+
+		.ga-fade-up.visible {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	</style>
+</head>
+<body>
+
+	<!-- ====== NAVIGATION ====== -->
+	<nav class="ga-navbar" id="navbar">
+		<div class="container">
+			<a href="#" class="ga-navbar-brand">
+				<span class="ga-navbar-brand-text">Global Azure Skopje</span>
+			</a>
+			<button class="ga-mobile-toggle" id="mobileToggle" aria-label="Toggle navigation">
+				<span></span>
+				<span></span>
+				<span></span>
+			</button>
+			<ul class="ga-nav-links" id="navLinks">
+				<li><a href="#about">About</a></li>
+				<li><a href="#speakers">Speakers</a></li>
+				<li><a href="#schedule">Schedule</a></li>
+				<li><a href="#sponsors">Supporters</a></li>
+				<li><a href="#location">Location</a></li>
+			</ul>
+		</div>
+	</nav>
+
+	<!-- ====== HERO ====== -->
+	<section class="ga-hero" id="hero">
+		<div class="ga-hero-particles">
+			<div class="particle"></div>
+			<div class="particle"></div>
+			<div class="particle"></div>
+			<div class="particle"></div>
+			<div class="particle"></div>
+			<div class="particle"></div>
+			<div class="particle"></div>
+			<div class="particle"></div>
+		</div>
+		<div class="ga-hero-content">
+			<div class="ga-hero-badge" data-aos="fade-down" data-aos-delay="100">
+				Free Community Event
+			</div>
+			<h1 data-aos="fade-up" data-aos-delay="200">
+				Global Azure<br><span class="highlight">Skopje 2026</span>
+			</h1>
+			<p class="ga-hero-subtitle" data-aos="fade-up" data-aos-delay="300">
+				Organized Globally, Held Locally. Join the third edition of the premier Microsoft Azure community event in Macedonia.
+			</p>
+			<div class="ga-hero-meta" data-aos="fade-up" data-aos-delay="400">
+				<div class="ga-hero-meta-item">
+					<div class="icon" style="background: none; padding: 0; border-radius: 0;">
+						<img src="images/netaville.png" alt="Netaville" style="height: 36px; width: auto; display: block;">
+					</div>
+				</div>
+				<div class="ga-hero-meta-item">
+					<div class="icon"><i class="icon-microphone"></i></div>
+					<div>
+						<strong>5 Sessions</strong>
+					</div>
 				</div>
 			</div>
-        	<section class="participation-cta ftco-section">
-        		<div class="container">
-        			<div class="row justify-content-center">
-        				<!-- <div class="col-md-8">
-        					<h2>Interested in Participating?</h2>
-        					<p>Click the link below to register for Global Azure Skopje 2025 and join us in this humanitarian effort.</p>
-        					<p><a href="https://docs.google.com/forms/d/e/1FAIpQLScR33eFzIw8mSEuZ-DyM3kIUn1qOsKJzYQdi4r8poZVGU5JYw/viewform" class="btn btn-primary btn-lg" target="_blank">Register Now</a></p>
-        					</div> -->
-        			</div>
-        		</div>
-        	</section>
-        	<section class="ftco-section">
-        		<div class="container">
-        			<div class="row justify-content-center mb-5 pb-3">
-        				<div class="col-md-7 text-center heading-section ftco-animate">
-        					<h2 class="mb-4"><span>Our</span> Speakers</h2>
-        				</div>
-        			</div>
-        			<div class="row">
-        				<div class="col-md-12 ftco-animate">
-        					<iframe src="speakers.html" style="
-        						width: 100%;
-        						border: none;
-        						height: 505px;
-        					"></iframe>
-        				</div>
-        			</div>
-        		</div>
-        	</section>
-        	<section class="ftco-section bg-light">
-        		<div class="container">
-        			<div class="row justify-content-center mb-5 pb-3">
-        				<div class="col-md-7 text-center heading-section ftco-animate">
-        					<h2 class="mb-4"><span>Event</span> Schedule</h2>
-        				</div>
-        			</div>
-        			<div class="ftco-search">
-        				<div class="row">
-        					<div class="col-md-12 nav-link-wrap">
-        						<script type="text/javascript" src="https://sessionize.com/api/v2/wjmu6pwr/view/GridSmart"></script>
-        					</div>
-        				</div>
-        			</div>
-        		</div>
-        	</section>
-        	<section class="ftco-section sponsors">
-		<!-- <div class="container">
-			<div class="row justify-content-center mb-5 pb-3">
-				<div class="col-md-7 text-center heading-section ftco-animate fadeInUp ftco-animated">
-					<h2 class="mb-4"><span>Our</span> Friends &amp; Supporters</h2>
+			<div class="ga-hero-actions" data-aos="fade-up" data-aos-delay="500">
+				<a href="#about" class="ga-btn ga-btn-primary">Learn More</a>
+				<a href="#schedule" class="ga-btn ga-btn-outline">View Schedule</a>
+			</div>
+
+			<!-- Countdown -->
+			<div class="ga-countdown" data-aos="fade-up" data-aos-delay="600" id="countdown">
+				<div class="ga-countdown-item">
+					<div class="ga-countdown-value" id="cd-days">--</div>
+					<div class="ga-countdown-label">Days</div>
+				</div>
+				<div class="ga-countdown-item">
+					<div class="ga-countdown-value" id="cd-hours">--</div>
+					<div class="ga-countdown-label">Hours</div>
+				</div>
+				<div class="ga-countdown-item">
+					<div class="ga-countdown-value" id="cd-mins">--</div>
+					<div class="ga-countdown-label">Minutes</div>
+				</div>
+				<div class="ga-countdown-item">
+					<div class="ga-countdown-value" id="cd-secs">--</div>
+					<div class="ga-countdown-label">Seconds</div>
 				</div>
 			</div>
-			<div class="row">
-				<div class="col-md-4">
-					<a href="https://www.balkan.edu.tr/en/innoxcenter/" target="_blank">
-						<img src="images/INNOX.png" class="img-fluid">
-					</a>
-				</div>
-				<div class="col-md-4">
-					<a href="https://base42.mk/" target="_blank">
-						<img src="images/Base_42.PNG" class="img-fluid" style="
-    width: 85%;
-">
-					</a>
-				</div>
-				<div class="col-md-4">
-					<a href="https://www.linkedin.com/company/adopt-intelligence/" target="_blank">
-						<img src="images/AdoptIntelligence.png" class="img-fluid" style="width: 95%;">
-					</a>
-				</div>
-                <div class="col-md-4">
-					<a href="https://www.ituziast.com/">
-						<img src="images/ITuzijast.png" class="img-fluid" style="height: 75%;">
-					</a>
-				</div>
-				<div class="col-md-4">
-					<a href="https://supportkocani.com/">
-						<img src="images/SupportKocani.PNG" class="img-fluid" style="height: 120%;width: 110%;">
-					</a>
-				</div>
-              	<div class="col-md-4">
-					<a href="https://www.tarmac.io/" target="_blank">
-						<img src="images/Tarmac.png" class="img-fluid">
-					</a>
-				</div>
-				<div class="col-md-4">
-					<a href="https://initgroup.com/" target="_blank">
-						<img src="images/Init_logo.png" class="img-fluid" style="width: 130%;">
-					</a>
-				</div>
-				<div class="col-md-4">
-					<a href="https://axaptamasters.com/" target="_blank">
-						<img src="images/AxaptaMasters.png" class="img-fluid" style="width: 130%;">
-					</a>
-				</div>
-				<div class="col-md-4">
-					<a href="https://www.mca.dev/" target="_blank">
-						<img src="images/MCA_logo.png" class="img-fluid" style="width: 110%;">
-					</a>
-				</div>
-				<div class="col-md-4">
-					<a href="https://codechem.com/" target="_blank">
-						<img src="images/CodeChem.png" class="img-fluid">
-					</a>
-				</div>
-				<div class="col-md-4">
-					<a href="https://it.mk/" target="_blank">
-						<img src="images/ItMK.jpg" class="img-fluid">
-					</a>
-				</div>
-				<div class="col-md-4">
-					<a href="https://successit.io/" target="_blank">
-						<img src="images/SuccessIT.png" class="img-fluid">
-					</a>
-				</div>
-			</div>
-		</div> -->
+		</div>
 	</section>
-            <section class="location-section">
-        <div class="container">
-            <div class="row justify-content-center mb-5 pb-3">
-                <div class="col-md-7 text-center heading-section ftco-animate">
-                    <h2 class="mb-4"><span>Event</span> Location</h2>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12">
-                    <p>The Global Azure Skopje 2026 event will be held at the <strong>Netaville</strong>, located at Karposh 2, on Nikola Tesla 9, 1000 Skopje, Macedonia. You can find more information on their official site: <a href="https://netaville.mk/" target="_blank">Netaville</a>.</p>
-                    <img class="location-map" src="images/netaville_location.png" alt="Netaville Location Map" style="width: 100%; height: auto; border: none;">
-                    <!-- <p class="mt-3">The Netaville is centrally located for easy access.</p> -->
-                </div>
-            </div>
-        </div>
-    </section>
-	
 
-        	<footer class="ftco-footer ftco-bg-dark ftco-section">
-        		<div class="container">
-        			<div class="row">
-        				<div class="col-md-12 text-center">
-        					<p>
-        						Copyright © 2026 | Macedonian .Net Community | All rights reserved<br/>This template is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-        					</p>
-        				</div>
-        			</div>
-        		</div>
-        	</footer>
+	<!-- ====== ABOUT ====== -->
+	<section class="ga-section ga-about" id="about">
+		<div class="container">
+			<div class="ga-about-grid">
+				<div class="ga-about-image" data-aos="fade-right" data-aos-duration="800">
+					<img src="images/GLAzure_2026_side.png" alt="Global Azure 2026 Skopje">
+				</div>
+				<div class="ga-about-content" data-aos="fade-left" data-aos-duration="800">
+					<h2><span>About</span> the Event</h2>
+					<p>
+						Global Azure is a community-driven event, with local gatherings worldwide focusing on Microsoft Azure services. This global event sees communities across the globe organizing local editions.
+					</p>
+					<p>
+						On the <strong>16th of April 2026</strong>, it will be held for the third time in <strong>Skopje, Macedonia</strong>. The event will feature a total of 5 sessions within a single track in the Netaville's amphitheatre.
+					</p>
+					<p>
+						<strong>Time:</strong> 16:30 – 20:30 (local time)
+					</p>
+					<div class="ga-about-features">
+						<div class="ga-about-feature">
+							<div class="icon">🎟️</div>
+							<span>Free Admission</span>
+						</div>
+						<div class="ga-about-feature">
+							<div class="icon">🤝</div>
+							<span>Community Driven</span>
+						</div>
+						<div class="ga-about-feature">
+							<div class="icon">🎤</div>
+							<span>5 Expert Sessions</span>
+						</div>
+						<div class="ga-about-feature">
+							<div class="icon">🌍</div>
+							<span>Global Movement</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 
-        	<div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
-        			<circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/>
-        			<circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+	<!-- ====== ORGANIZERS ====== -->
+	<section class="ga-section ga-organizers" id="organizers">
+		<div class="container">
+			<div class="ga-section-header" data-aos="fade-up">
+				<div class="ga-section-label">The Team</div>
+				<h2 class="ga-section-title">Organized By</h2>
+				<p class="ga-section-subtitle">The Global Azure 2026 Skopje Edition is proudly organized by the Macedonian community.</p>
+			</div>
+			<div data-aos="fade-up" data-aos-delay="200" style="text-align: center;">
+				<img src="images/Organizers.png" alt="Organizers" class="ga-organizers-img">
+			</div>
+		</div>
+	</section>
 
-        	<script src="js/jquery.min.js"></script>
-        	<script src="js/jquery-migrate-3.0.1.min.js"></script>
-        	<script src="js/popper.min.js"></script>
-        	<script src="js/bootstrap.min.js"></script>
-        	<script src="js/jquery.easing.1.3.js"></script>
-        	<script src="js/jquery.waypoints.min.js"></script>
-        	<script src="js/jquery.stellar.min.js"></script>
-        	<script src="js/owl.carousel.min.js"></script>
-        	<script src="js/jquery.magnific-popup.min.js"></script>
-        	<script src="js/aos.js"></script>
-        	<script src="js/jquery.animateNumber.min.js"></script>
-        	<script src="js/bootstrap-datepicker.js"></script>
-        	<script src="js/scrollax.min.js"></script>
-        	<script src="js/google-map.js"></script>
-        	<script src="js/main.js"></script>
+	<!-- ====== SPEAKERS ====== -->
+	<section class="ga-section ga-speakers" id="speakers">
+		<div class="container">
+			<div class="ga-section-header" data-aos="fade-up">
+				<div class="ga-section-label">Meet the Experts</div>
+				<h2 class="ga-section-title">Our Speakers</h2>
+				<p class="ga-section-subtitle">Learn from experienced professionals sharing their Azure knowledge and real-world insights.</p>
+			</div>
+			<div class="ga-speakers-embed" data-aos="fade-up" data-aos-delay="200">
+				<iframe src="speakers.html" title="Speakers"></iframe>
+			</div>
+		</div>
+	</section>
 
-        </body>
-        </html>
+	<!-- ====== SCHEDULE ====== -->
+	<section class="ga-section ga-schedule" id="schedule">
+		<div class="container">
+			<div class="ga-section-header" data-aos="fade-up">
+				<div class="ga-section-label">Plan Your Day</div>
+				<h2 class="ga-section-title">Event Schedule</h2>
+				<p class="ga-section-subtitle">A full day of Azure sessions, networking, and community engagement.</p>
+			</div>
+			<div class="ga-schedule-embed" data-aos="fade-up" data-aos-delay="200">
+				<script type="text/javascript" src="https://sessionize.com/api/v2/wjmu6pwr/view/GridSmart"></script>
+			</div>
+		</div>
+	</section>
+
+	<!-- ====== SPONSORS ====== -->
+	<section class="ga-section ga-sponsors" id="sponsors">
+		<div class="container">
+			<div class="ga-section-header" data-aos="fade-up">
+				<div class="ga-section-label">Thank You</div>
+				<h2 class="ga-section-title">Friends & Supporters</h2>
+				<p class="ga-section-subtitle">This event is made possible by our amazing community partners and supporters.</p>
+			</div>
+			<!-- SPONSORS GRID - uncomment and update as needed
+			<div class="ga-sponsors-grid" data-aos="fade-up" data-aos-delay="200">
+				<a href="https://www.balkan.edu.tr/en/innoxcenter/" target="_blank" class="ga-sponsor-card">
+					<img src="images/INNOX.png" alt="INNOX" class="img-fluid">
+				</a>
+				<a href="https://base42.mk/" target="_blank" class="ga-sponsor-card">
+					<img src="images/Base_42.PNG" alt="Base 42" class="img-fluid">
+				</a>
+				<a href="https://www.linkedin.com/company/adopt-intelligence/" target="_blank" class="ga-sponsor-card">
+					<img src="images/AdoptIntelligence.png" alt="Adopt Intelligence" class="img-fluid">
+				</a>
+				<a href="https://www.ituziast.com/" target="_blank" class="ga-sponsor-card">
+					<img src="images/ITuzijast.png" alt="ITuziast" class="img-fluid">
+				</a>
+				<a href="https://supportkocani.com/" target="_blank" class="ga-sponsor-card">
+					<img src="images/SupportKocani.PNG" alt="Support Kocani" class="img-fluid">
+				</a>
+				<a href="https://www.tarmac.io/" target="_blank" class="ga-sponsor-card">
+					<img src="images/Tarmac.png" alt="Tarmac" class="img-fluid">
+				</a>
+				<a href="https://initgroup.com/" target="_blank" class="ga-sponsor-card">
+					<img src="images/Init_logo.png" alt="Init Group" class="img-fluid">
+				</a>
+				<a href="https://axaptamasters.com/" target="_blank" class="ga-sponsor-card">
+					<img src="images/AxaptaMasters.png" alt="Axapta Masters" class="img-fluid">
+				</a>
+				<a href="https://www.mca.dev/" target="_blank" class="ga-sponsor-card">
+					<img src="images/MCA_logo.png" alt="MCA" class="img-fluid">
+				</a>
+				<a href="https://codechem.com/" target="_blank" class="ga-sponsor-card">
+					<img src="images/CodeChem.png" alt="CodeChem" class="img-fluid">
+				</a>
+				<a href="https://it.mk/" target="_blank" class="ga-sponsor-card">
+					<img src="images/ItMK.jpg" alt="IT.mk" class="img-fluid">
+				</a>
+				<a href="https://successit.io/" target="_blank" class="ga-sponsor-card">
+					<img src="images/SuccessIT.png" alt="SuccessIT" class="img-fluid">
+				</a>
+			</div>
+			-->
+		</div>
+	</section>
+
+	<!-- ====== LOCATION ====== -->
+	<section class="ga-section ga-location" id="location">
+		<div class="container">
+			<div class="ga-section-header" data-aos="fade-up">
+				<div class="ga-section-label">Find Us</div>
+				<h2 class="ga-section-title">Event Location</h2>
+			</div>
+			<div class="ga-location-grid">
+				<div class="ga-location-info" data-aos="fade-right">
+					<h3 style="display: flex; align-items: center; gap: 0;"><span style="display: inline-flex; background: #fff; padding: 12px 24px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);"><img src="images/netaville_logo.svg" alt="Netaville" style="height: 48px; width: auto; display: block;"></span></h3>
+					<p>The event will be held in the modern amphitheatre at Netaville, a central co-working and event space in the heart of Skopje.</p>
+					<div class="ga-location-details">
+						<div class="ga-location-detail">
+							<div class="icon"><i class="icon-location-pin"></i></div>
+							<div class="info">
+								<strong>Address</strong>
+								<span>Nikola Tesla 9, Karposh 2, 1000 Skopje</span>
+							</div>
+						</div>
+						<div class="ga-location-detail">
+							<div class="icon"><i class="icon-calendar"></i></div>
+							<div class="info">
+								<strong>Date</strong>
+								<span>April 16, 2026</span>
+							</div>
+						</div>
+						<div class="ga-location-detail">
+							<div class="icon"><i class="icon-globe"></i></div>
+							<div class="info">
+								<strong>Website</strong>
+								<span><a href="https://netaville.mk/" target="_blank" style="color: var(--azure-primary); text-decoration: none;">netaville.mk</a></span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="ga-location-map" data-aos="fade-left">
+					<img src="images/netaville_location.png" alt="Netaville Location Map">
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- ====== FOOTER ====== -->
+	<footer class="ga-footer">
+		<div class="container">
+			<div class="ga-footer-top">
+				<div class="ga-footer-brand">
+					<h3>Global Azure Skopje 2026</h3>
+					<p>A free, community-driven Microsoft Azure event. Organized globally, held locally in Skopje, Macedonia.</p>
+				</div>
+				<div class="ga-footer-links">
+					<div class="ga-footer-links-column">
+						<h4>Event</h4>
+						<ul>
+							<li><a href="#about">About</a></li>
+							<li><a href="#speakers">Speakers</a></li>
+							<li><a href="#schedule">Schedule</a></li>
+							<li><a href="#location">Location</a></li>
+						</ul>
+					</div>
+					<div class="ga-footer-links-column">
+						<h4>Community</h4>
+						<ul>
+							<li><a href="#sponsors">Supporters</a></li>
+							<li><a href="https://globalazure.net" target="_blank">Global Azure</a></li>
+							<li><a href="https://azure.microsoft.com" target="_blank">Microsoft Azure</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="ga-footer-address" style="padding-bottom: 24px; display: flex; align-items: center; gap: 10px; color: rgba(255,255,255,0.5); font-size: 0.9rem;">
+				<span style="font-size: 1.2rem;">📍</span>
+				<span>Nikola Tesla 9, Karposh 2, 1000 Skopje, Macedonia</span>
+			</div>
+			<div class="ga-footer-bottom">
+				<p>Copyright &copy; 2026 | Macedonian .NET Community | All rights reserved</p>
+				<p>Template crafted with <i class="icon-heart" style="color: #dc3545;"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a></p>
+			</div>
+		</div>
+	</footer>
+
+	<!-- Scroll to top -->
+	<button class="ga-scroll-top" id="scrollTop" aria-label="Scroll to top">
+		<i class="icon-arrow-up"></i>
+	</button>
+
+	<!-- Scripts -->
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery-migrate-3.0.1.min.js"></script>
+	<script src="js/popper.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.easing.1.3.js"></script>
+	<script src="js/jquery.waypoints.min.js"></script>
+	<script src="js/jquery.stellar.min.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/jquery.magnific-popup.min.js"></script>
+	<script src="js/aos.js"></script>
+	<script src="js/jquery.animateNumber.min.js"></script>
+	<script src="js/scrollax.min.js"></script>
+	<script src="js/main.js"></script>
+
+	<script>
+		// Initialize AOS
+		AOS.init({
+			duration: 800,
+			easing: 'ease-out-cubic',
+			once: true,
+			offset: 50
+		});
+
+		// Navbar scroll effect
+		const navbar = document.getElementById('navbar');
+		window.addEventListener('scroll', function() {
+			if (window.scrollY > 50) {
+				navbar.classList.add('scrolled');
+			} else {
+				navbar.classList.remove('scrolled');
+			}
+		});
+
+		// Mobile toggle
+		const mobileToggle = document.getElementById('mobileToggle');
+		const navLinks = document.getElementById('navLinks');
+		mobileToggle.addEventListener('click', function() {
+			navLinks.classList.toggle('active');
+		});
+
+		// Close mobile nav on link click
+		document.querySelectorAll('.ga-nav-links a').forEach(function(link) {
+			link.addEventListener('click', function() {
+				navLinks.classList.remove('active');
+			});
+		});
+
+		// Smooth scroll for anchor links
+		document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+			anchor.addEventListener('click', function(e) {
+				e.preventDefault();
+				const target = document.querySelector(this.getAttribute('href'));
+				if (target) {
+					const offset = 80;
+					const position = target.getBoundingClientRect().top + window.pageYOffset - offset;
+					window.scrollTo({ top: position, behavior: 'smooth' });
+				}
+			});
+		});
+
+		// Countdown timer
+		function updateCountdown() {
+			const eventDate = new Date('2026-04-16T09:00:00').getTime();
+			const now = new Date().getTime();
+			const diff = eventDate - now;
+
+			if (diff > 0) {
+				const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+				const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+				const mins = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+				const secs = Math.floor((diff % (1000 * 60)) / 1000);
+
+				document.getElementById('cd-days').textContent = days;
+				document.getElementById('cd-hours').textContent = hours.toString().padStart(2, '0');
+				document.getElementById('cd-mins').textContent = mins.toString().padStart(2, '0');
+				document.getElementById('cd-secs').textContent = secs.toString().padStart(2, '0');
+			} else {
+				document.getElementById('cd-days').textContent = '0';
+				document.getElementById('cd-hours').textContent = '00';
+				document.getElementById('cd-mins').textContent = '00';
+				document.getElementById('cd-secs').textContent = '00';
+			}
+		}
+
+		updateCountdown();
+		setInterval(updateCountdown, 1000);
+
+		// Scroll to top button
+		const scrollTopBtn = document.getElementById('scrollTop');
+		window.addEventListener('scroll', function() {
+			if (window.scrollY > 500) {
+				scrollTopBtn.classList.add('visible');
+			} else {
+				scrollTopBtn.classList.remove('visible');
+			}
+		});
+
+		scrollTopBtn.addEventListener('click', function() {
+			window.scrollTo({ top: 0, behavior: 'smooth' });
+		});
+	</script>
+
+</body>
+</html>
