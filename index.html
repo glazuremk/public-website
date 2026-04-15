@@ -639,10 +639,63 @@
 			background: var(--bg-white);
 		}
 
+		.ga-sponsor-tier {
+			margin-bottom: 3rem;
+		}
+
+		.ga-sponsor-tier:last-child {
+			margin-bottom: 0;
+		}
+
+		.ga-sponsor-tier-title {
+			text-align: center;
+			font-size: 0.8rem;
+			font-weight: 600;
+			text-transform: uppercase;
+			letter-spacing: 2px;
+			color: var(--text-light);
+			margin-bottom: 1.5rem;
+			display: flex;
+			align-items: center;
+			gap: 16px;
+		}
+
+		.ga-sponsor-tier-title::before,
+		.ga-sponsor-tier-title::after {
+			content: '';
+			flex: 1;
+			height: 1px;
+			background: var(--border-light);
+		}
+
 		.ga-sponsors-grid {
 			display: grid;
-			grid-template-columns: repeat(4, 1fr);
 			gap: 1.5rem;
+		}
+
+		.ga-sponsors-grid.tier-enterprise {
+			grid-template-columns: 1fr;
+			max-width: 380px;
+			margin: 0 auto;
+		}
+
+		.ga-sponsors-grid.tier-enterprise .ga-sponsor-card {
+			min-height: 140px;
+		}
+
+		.ga-sponsors-grid.tier-enterprise .ga-sponsor-card img {
+			max-width: 200px;
+			max-height: 100px;
+		}
+
+		.ga-sponsors-grid.tier-business {
+			grid-template-columns: repeat(4, 1fr);
+		}
+
+		.ga-sponsors-grid.tier-friends {
+			grid-template-columns: repeat(2, 1fr);
+			max-width: 560px;
+			margin: 0 auto;
 		}
 
 		.ga-sponsor-card {
@@ -871,6 +924,10 @@
 
 		/* ============ RESPONSIVE ============ */
 		@media (max-width: 991px) {
+			.ga-sponsors-grid.tier-business {
+				grid-template-columns: repeat(2, 1fr);
+			}
+
 			.ga-nav-links {
 				display: none;
 				position: absolute;
@@ -959,7 +1016,7 @@
 				grid-template-columns: 1fr;
 			}
 
-			.ga-sponsors-grid {
+			.ga-sponsors-grid.tier-business {
 				grid-template-columns: repeat(2, 1fr);
 			}
 
@@ -1224,58 +1281,46 @@
 			</div>
 			-->
 
-			<div class="ga-sponsors-grid" data-aos="fade-up" data-aos-delay="200">
-				<!-- <a href="https://www.balkan.edu.tr/en/innoxcenter/" target="_blank" class="ga-sponsor-card">
-					<img src="images/INNOX.png" alt="INNOX" class="img-fluid">
-				</a> -->
-				<a href="https://base42.mk/" target="_blank" class="ga-sponsor-card">
-					<img src="images/Base_42.PNG" alt="Base 42" class="img-fluid">
-				</a>
-				<a href="https://initgroup.com/" target="_blank" class="ga-sponsor-card">
-					<img src="images/Init_logo_new.png" alt="Init Group" class="img-fluid">
-				</a>
-				<a href="https://iwconnect.com/" target="_blank" class="ga-sponsor-card">
-					<img src="images/IWC_logo.png" alt="IWConnect" class="img-fluid">
-				</a>
-				<a href="https://www.xessable.com/" target="_blank" class="ga-sponsor-card">
-					<img src="images/Xessable.png" alt="Xessable" class="img-fluid">
-				</a>
-				<a href="https://netaville.mk/" target="_blank" class="ga-sponsor-card">
-					<img src="images/netaville.png" alt="Netaville" class="img-fluid">
-				</a>
-				<a href="https://successit.io/" target="_blank" class="ga-sponsor-card">
-					<img src="images/SuccessIT.png" alt="SuccessIT" class="img-fluid">
-				</a> 
-				<!-- <a href="https://www.linkedin.com/company/adopt-intelligence/" target="_blank" class="ga-sponsor-card">
-					<img src="images/AdoptIntelligence.png" alt="Adopt Intelligence" class="img-fluid">
-				</a>
-				<a href="https://www.ituziast.com/" target="_blank" class="ga-sponsor-card">
-					<img src="images/ITuzijast.png" alt="ITuziast" class="img-fluid">
-				</a>
-				<a href="https://supportkocani.com/" target="_blank" class="ga-sponsor-card">
-					<img src="images/SupportKocani.PNG" alt="Support Kocani" class="img-fluid">
-				</a>
-				<a href="https://www.tarmac.io/" target="_blank" class="ga-sponsor-card">
-					<img src="images/Tarmac.png" alt="Tarmac" class="img-fluid">
-				</a>
-				<a href="https://initgroup.com/" target="_blank" class="ga-sponsor-card">
-					<img src="images/Init_logo.png" alt="Init Group" class="img-fluid">
-				</a>
-				<a href="https://axaptamasters.com/" target="_blank" class="ga-sponsor-card">
-					<img src="images/AxaptaMasters.png" alt="Axapta Masters" class="img-fluid">
-				</a>
-				<a href="https://www.mca.dev/" target="_blank" class="ga-sponsor-card">
-					<img src="images/MCA_logo.png" alt="MCA" class="img-fluid">
-				</a>
-				<a href="https://codechem.com/" target="_blank" class="ga-sponsor-card">
-					<img src="images/CodeChem.png" alt="CodeChem" class="img-fluid">
-				</a>
-				<a href="https://it.mk/" target="_blank" class="ga-sponsor-card">
-					<img src="images/ItMK.jpg" alt="IT.mk" class="img-fluid">
-				</a>
-				<a href="https://successit.io/" target="_blank" class="ga-sponsor-card">
-					<img src="images/SuccessIT.png" alt="SuccessIT" class="img-fluid">
-				</a> -->
+			<!-- Enterprise Supporters -->
+			<div class="ga-sponsor-tier" data-aos="fade-up" data-aos-delay="200">
+				<div class="ga-sponsor-tier-title">Enterprise Supporters</div>
+				<div class="ga-sponsors-grid tier-enterprise">
+					<a href="https://iwconnect.com/" target="_blank" class="ga-sponsor-card">
+						<img src="images/IWC_logo.png" alt="IWConnect" class="img-fluid">
+					</a>
+				</div>
+			</div>
+
+			<!-- Business Supporters -->
+			<div class="ga-sponsor-tier" data-aos="fade-up" data-aos-delay="300">
+				<div class="ga-sponsor-tier-title">Business Supporters</div>
+				<div class="ga-sponsors-grid tier-business">
+					<a href="https://initgroup.com/" target="_blank" class="ga-sponsor-card">
+						<img src="images/Init_logo_new.png" alt="Init Group" class="img-fluid">
+					</a>
+					<a href="https://www.xessable.com/" target="_blank" class="ga-sponsor-card">
+						<img src="images/Xessable.png" alt="Xessable" class="img-fluid">
+					</a>
+					<a href="https://haselt.com/" target="_blank" class="ga-sponsor-card">
+						<img src="images/HASELT.png" alt="Haselt" class="img-fluid">
+					</a>
+					<a href="https://successit.io/" target="_blank" class="ga-sponsor-card">
+						<img src="images/SuccessIT.png" alt="SuccessIT" class="img-fluid">
+					</a>
+				</div>
+			</div>
+
+			<!-- Friends -->
+			<div class="ga-sponsor-tier" data-aos="fade-up" data-aos-delay="400">
+				<div class="ga-sponsor-tier-title">Friends</div>
+				<div class="ga-sponsors-grid tier-friends">
+					<a href="https://netaville.mk/" target="_blank" class="ga-sponsor-card">
+						<img src="images/netaville.png" alt="Netaville" class="img-fluid">
+					</a>
+					<a href="https://base42.mk/" target="_blank" class="ga-sponsor-card">
+						<img src="images/Base_42.PNG" alt="Base 42" class="img-fluid">
+					</a>
+				</div>
 			</div>
 		</div>
 	</section>
